@@ -101,7 +101,7 @@ export default function Footer() {
                     <li>
                       <a
                         className="text-slate-600 hover:text-slate-800 font-semibold block pb-2 text-sm"
-                        href="/contact-us"
+                        href="mailto:support@loulop.io"
                       >
                         Contact Us
                       </a>
