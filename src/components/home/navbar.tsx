@@ -18,10 +18,14 @@ export default function Navbar() {
               <img
                 className="inline mx-2"
                 src="/images/logo192.svg"
+                alt="logo"
                 width="22"
                 height="22"
               />
               Loulop
+              <small className="mx-1 lowercase font-medium text-slate-400">
+                alpha
+              </small>
             </a>
           </Link>
           {/**/}
@@ -57,18 +61,18 @@ export default function Navbar() {
             <li className="flex items-center">
               <a
                 className="hover:text-slate-500 text-slate-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdemos.creative-tim.com%2Fnotus-nextjs%2F"
+                href="https://linkedin.com/company/loulop"
                 target="_blank"
               >
-                <i className="text-slate-400 fab fa-facebook text-lg leading-lg " />
-                <span className="lg:hidden inline-block ml-2">Share</span>
+                <i className="text-slate-400 fab fa-linkedin text-lg leading-lg " />
+                <span className="lg:hidden inline-block ml-2">Visit</span>
               </a>
             </li>
 
             <li className="flex items-center">
               <a
                 className="hover:text-slate-500 text-slate-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fdemos.creative-tim.com%2Fnotus-nextjs%2F&text=Start%20your%20development%20with%20a%20Free%20Tailwind%20CSS%20and%20NextJS%20UI%20Kit%20and%20Admin.%20Let%20Notus%20NextJS%20amaze%20you%20with%20its%20cool%20features%20and%20build%20tools%20and%20get%20your%20project%20to%20a%20whole%20new%20level."
+                href="https://twitter.com/louloper"
                 target="_blank"
               >
                 <i className="text-slate-400 fab fa-twitter text-lg leading-lg " />
@@ -79,7 +83,7 @@ export default function Navbar() {
             <li className="flex items-center">
               <a
                 className="hover:text-slate-500 text-slate-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                href="https://github.com/creativetimofficial/notus-nextjs?ref=nnjs-index-navbar"
+                href="https://github.com/loulop"
                 target="_blank"
               >
                 <i className="text-slate-400 fab fa-github text-lg leading-lg " />
