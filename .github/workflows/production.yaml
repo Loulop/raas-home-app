@@ -8,7 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: install Node/Yarn 
+      - name: Prepare Container
         run: |
           sudo apt-get update && sudo apt-get install curl -y
           curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash - 
