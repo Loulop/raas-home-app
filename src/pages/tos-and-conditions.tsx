@@ -17,7 +17,7 @@ const ToSandConditions: NextPage = () => {
         </div>
         {/**/}
         <div
-          className="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-16"
+          className="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-20"
           style={{ transform: "translateZ(0)" }}
         >
           <svg
