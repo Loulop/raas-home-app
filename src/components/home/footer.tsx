@@ -66,11 +66,10 @@ export default function Footer() {
                   </span>
                   <ul className="list-unstyled">
                     <li>
-                      <Link
-                        className="text-slate-600 hover:text-slate-800 font-semibold block pb-2 text-sm"
-                        href="/about-us"
-                      >
-                        About Us
+                      <Link href="/about-us">
+                        <a className="text-slate-600 hover:text-slate-800 font-semibold block pb-2 text-sm">
+                          About Us
+                        </a>
                       </Link>
                     </li>
                     <li>

@@ -48,11 +48,9 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
-        <img
-          className="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860-px"
-          src="/images/logo_bg759.svg"
-          alt="..."
-        />
+        <div className="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860-px -z-50 h-full">
+          <Image src={"/images/logo_bg759.svg"} layout="fill" alt="..." />
+        </div>
       </section>
       {/**/}
       <section className="py-2 bg-slate-600 relative">

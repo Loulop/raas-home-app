@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Navbar from "../components/home/navbar";
 import Footer from "../components/home/footer";
+import Image from "next/image";
 
 const AboutUs: NextPage = () => {
   return (
@@ -46,15 +47,12 @@ const AboutUs: NextPage = () => {
                     className="relative flex shadow-xl rounded-full justify-center items-center border-none absolute -m-16 bg-white"
                     style={{ width: 150, height: 150 }}
                   >
-                    <img
+                    <Image
                       alt="..."
-                      src="/images/logo-named-2.png"
-                      className=""
-                      style={{
-                        width: 90,
-                        height: 90,
-                        objectFit: "contain"
-                      }}
+                      src={"/images/logo-named-2.png"}
+                      width={90}
+                      height={90}
+                      objectFit="contain"
                     />
                   </div>
                 </div>

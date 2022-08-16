@@ -1,5 +1,5 @@
 import React from "react";
-// import Image from 'next/image'
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Navbar() {
@@ -13,15 +13,17 @@ export default function Navbar() {
           <Link href="/">
             <a
               href="#"
-              className="text-slate-700 text-sm font-bold leading-relaxed inline-block mr-4 whitespace-nowrap uppercase"
+              className="text-slate-700 text-sm font-bold leading-relaxed inline-block mr-4 whitespace-nowrap uppercase flex"
             >
-              <img
-                className="inline mx-2"
-                src="/images/logo192.svg"
-                alt="logo"
-                width="22"
-                height="22"
-              />
+              <div className="inline mx-2 flex">
+                <Image
+                  className=""
+                  src={"/images/logo192.svg"}
+                  alt="logo"
+                  width={22}
+                  height={22}
+                />
+              </div>
               Loulop
               <small className="mx-1 lowercase font-medium text-slate-400">
                 alpha
