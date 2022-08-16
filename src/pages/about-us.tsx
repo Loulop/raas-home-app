@@ -49,7 +49,7 @@ const AboutUs: NextPage = () => {
                   >
                     <Image
                       alt="..."
-                      src={"/images/logo-named-2.png"}
+                      src={"images/logo-named-2.png"}
                       width={90}
                       height={90}
                       objectFit="contain"
