@@ -6,8 +6,12 @@ on:
 
 jobs:
   build:
-    runs-on: node:18
+    runs-on: ubuntu-latest
     steps:
+      - name: install Node/Yarn
+        run: |
+          sudo apt-get update && sudo apt-get install node yarn -y
+      
       - name: Checkout 🛎️
         uses: actions/checkout@v3
 
