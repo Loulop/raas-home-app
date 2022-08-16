@@ -1,5 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  assetPrefix: "/raas-home-app/",
+  basePath: "/raas-home-app",
+  env: {
+    BACKEND_URL: "/raas-home-app"
+  },
   reactStrictMode: true,
   swcMinify: true,
   distDir: "build",

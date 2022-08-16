@@ -68,7 +68,7 @@ export default function Footer() {
                     <li>
                       <Link
                         className="text-slate-600 hover:text-slate-800 font-semibold block pb-2 text-sm"
-                        href="/about-us"
+                        href={`${process.env.BACKEND_URL}/about-us`}
                       >
                         About Us
                       </Link>
