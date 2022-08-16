@@ -8,7 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: install Node/Yarn
+      - name: install Node/Yarn 
         run: |
           sudo apt-get update && sudo apt-get install curl -y
           curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash - 
@@ -21,6 +21,7 @@ jobs:
         run: |
           yarn install
           yarn build
+          yarn export
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
