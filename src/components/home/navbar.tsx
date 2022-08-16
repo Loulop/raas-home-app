@@ -18,7 +18,7 @@ export default function Navbar() {
               <div className="inline mx-2 flex">
                 <Image
                   className=""
-                  src={"images/logo192.svg"}
+                  src={"/images/logo192.svg"}
                   alt="logo"
                   width={22}
                   height={22}
