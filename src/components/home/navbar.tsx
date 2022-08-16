@@ -51,7 +51,9 @@ export default function Navbar() {
             <li className="flex items-center">
               <a
                 className="hover:text-slate-500 text-slate-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                href="/docs"
+                target="_blank"
+                rel="noreferrer"
+                href="https://docs.loulop.io"
               >
                 <i className="text-slate-400 text-lg leading-lg mr-2 far fa-file-alt" />{" "}
                 Docs
