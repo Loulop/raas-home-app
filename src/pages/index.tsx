@@ -95,8 +95,9 @@ const Home: NextPage = () => {
                 </span>
               </p>
               <a
-                href="/docs"
+                href="https://docs.loulop.io"
                 target="_blank"
+                rel="noreferrer"
                 aria-label="documentation"
                 className="mt-4 inline-block text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-slate-700 active:bg-slate-600 uppercase text-sm shadow hover:shadow-lg"
               >
