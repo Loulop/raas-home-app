@@ -39,6 +39,7 @@ export default function Footer() {
                   className="flex bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                   aria-label="Twitter"
                   target="_blank"
+                  rel="noreferrer"
                   href="https://twitter.com/louloper"
                 >
                   <i className="fab fa-twitter"></i>
@@ -47,6 +48,7 @@ export default function Footer() {
                   className="flex bg-white text-blue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                   aria-label="LinkedIn"
                   target="_blank"
+                  rel="noreferrer"
                   href="https://www.linkedin.com/company/loulop"
                 >
                   <i className="fab fa-linkedin"></i>
@@ -55,6 +57,7 @@ export default function Footer() {
                   className="flex bg-white text-slate-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                   href="https://www.github.com/loulop"
                   target="_blank"
+                  rel="noreferrer"
                   aria-label="Github"
                 >
                   <i className="fab fa-github"></i>
