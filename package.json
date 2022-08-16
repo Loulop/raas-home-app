@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev --port 9000",
     "build": "next build",
+    "export": "next export",
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write \"**/*.{css,cjs,mjs,js,jsx,ts,tsx,json,md}\" --config prettier.config.json --ignore-path .prettierignore"

@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -27,7 +28,7 @@ export default function Footer() {
           <div className="flex flex-wrap text-center lg:text-left">
             <div className="w-full lg:w-6/12 px-4">
               <h4 className="text-3xl font-semibold mb-2">
-                Let's keep in touch!
+                {"Let's keep in touch!"}
               </h4>
               <h5 className="text-lg mt-0 mb-2 text-slate-600">
                 Find us on any of these platforms, we respond in 1-2 business
@@ -65,17 +66,18 @@ export default function Footer() {
                   </span>
                   <ul className="list-unstyled">
                     <li>
-                      <a
+                      <Link
                         className="text-slate-600 hover:text-slate-800 font-semibold block pb-2 text-sm"
                         href="/about-us"
                       >
                         About Us
-                      </a>
+                      </Link>
                     </li>
                     <li>
                       <a
                         className="text-slate-600 hover:text-slate-800 font-semibold block pb-2 text-sm"
                         target="_blank"
+                        rel="noreferrer"
                         href="https://medium.com/@loulop"
                       >
                         Blog
@@ -93,6 +95,7 @@ export default function Footer() {
                       <a
                         className="text-slate-600 hover:text-slate-800 font-semibold block pb-2 text-sm"
                         target="_blank"
+                        rel="noreferrer"
                         href="https://github.com/loulop"
                       >
                         Github

@@ -62,6 +62,7 @@ export default function Navbar() {
               <a
                 className="hover:text-slate-500 text-slate-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                 href="https://linkedin.com/company/loulop"
+                rel="noreferrer"
                 target="_blank"
               >
                 <i className="text-slate-400 fab fa-linkedin text-lg leading-lg " />
@@ -73,6 +74,7 @@ export default function Navbar() {
               <a
                 className="hover:text-slate-500 text-slate-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                 href="https://twitter.com/louloper"
+                rel="noreferrer"
                 target="_blank"
               >
                 <i className="text-slate-400 fab fa-twitter text-lg leading-lg " />
@@ -84,6 +86,7 @@ export default function Navbar() {
               <a
                 className="hover:text-slate-500 text-slate-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                 href="https://github.com/loulop"
+                rel="noreferrer"
                 target="_blank"
               >
                 <i className="text-slate-400 fab fa-github text-lg leading-lg " />
