@@ -72,7 +72,7 @@ const Home: NextPage = () => {
             ></polygon>
           </svg>
         </div>
-        <div className="container mx-auto pb-64">
+        <div className="container mx-auto md:pb-64 pb-16">
           <div className="flex flex-wrap justify-center">
             <div className="w-full md:w-5/12 px-12 md:px-4 ml-auto mr-auto md:mt-32 mt-16">
               <div className="text-slate-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
