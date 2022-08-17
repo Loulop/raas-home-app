@@ -31,7 +31,7 @@ const Home: NextPage = () => {
               <span>recommendations at scale.</span>
             </p>
             {/**/}
-            <div className="mt-12">
+            <div className="mt-12 flex">
               <a
                 href="/apps"
                 className="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-2 mb-1 bg-slate-700 active:bg-slate-600 uppercase text-sm shadow hover:shadow-lg"
@@ -74,7 +74,7 @@ const Home: NextPage = () => {
         </div>
         <div className="container mx-auto pb-64">
           <div className="flex flex-wrap justify-center">
-            <div className="w-full md:w-5/12 px-12 md:px-4 ml-auto mr-auto md:mt-32">
+            <div className="w-full md:w-5/12 px-12 md:px-4 ml-auto mr-auto md:mt-32 mt-16">
               <div className="text-slate-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
                 <i className="far fa-file-alt text-xl"></i>
               </div>
