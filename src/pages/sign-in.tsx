@@ -18,7 +18,7 @@ const SignIn: NextPage = () => {
         <div className="absolute top-0 w-full h-full bg-slate-800 bg-no-repeat bg-full"></div>
         {/**/}
         {/**/}
-        <Footer absolute />
+        <Footer />
         {/**/}
       </section>
     </>
