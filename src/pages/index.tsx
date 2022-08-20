@@ -4,6 +4,7 @@ import Navbar from "../components/home/navbar";
 import Footer from "../components/home/footer";
 import useReco from "../components/shared/hooks/useReco";
 import NewsLetter from "../components/home/newsLetter";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   const recommendation = useReco();
@@ -32,12 +33,11 @@ const Home: NextPage = () => {
             </p>
             {/**/}
             <div className="mt-12 flex">
-              <a
-                href="/apps"
-                className="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-2 mb-1 bg-slate-700 active:bg-slate-600 uppercase text-sm shadow hover:shadow-lg"
-              >
-                Get Started
-              </a>
+              <Link href="/apps">
+                <a className="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-2 mb-1 bg-slate-700 active:bg-slate-600 uppercase text-sm shadow hover:shadow-lg">
+                  Get Started
+                </a>
+              </Link>
               <a
                 href="mailto:support@loulop.io"
                 className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-2 mb-1 bg-slate-400 active:bg-slate-500 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150"

@@ -98,12 +98,11 @@ export default function Navbar() {
             </li>
 
             <li className="flex items-center">
-              <a
-                href="/apps"
-                className="bg-slate-700 text-white active:bg-slate-600 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 lg:mt-0 my-3 ease-linear transition-all duration-150"
-              >
-                My Apps
-              </a>
+              <Link href="/apps">
+                <a className="bg-slate-700 text-white active:bg-slate-600 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 lg:mt-0 my-3 ease-linear transition-all duration-150">
+                  My Apps
+                </a>
+              </Link>
             </li>
           </ul>
         </div>
