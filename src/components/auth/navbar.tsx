@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Navbar(props) {
+export default function Navbar() {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
 
   return (
