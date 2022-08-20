@@ -124,6 +124,13 @@ export default function Footer() {
                   </span>
                   <ul className="list-unstyled">
                     <li>
+                      <Link href="/privacy-policy">
+                        <a className="text-slate-600 hover:text-slate-800 font-semibold block pb-2 text-sm">
+                          Privacy Policy
+                        </a>
+                      </Link>
+                    </li>
+                    <li>
                       <Link href="/tos-and-conditions">
                         <a className="text-slate-600 hover:text-slate-800 font-semibold block pb-2 text-sm">
                           Terms & Conditions
