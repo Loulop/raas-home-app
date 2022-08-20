@@ -1,8 +1,8 @@
 import React from "react";
 import type NextPage from "next";
 import Navbar from "../components/auth/navbar";
-import Userfront from "@userfront/react";
 import Footer from "../components/auth/footer";
+// import Userfront from "@userfront/react";
 
 const SignIn: NextPage = () => {
   Userfront.init("8b68zzdb");
