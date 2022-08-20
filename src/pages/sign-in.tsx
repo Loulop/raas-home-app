@@ -5,11 +5,11 @@ import Footer from "../components/auth/footer";
 // import Userfront from "@userfront/react";
 
 const SignIn: NextPage = () => {
-  Userfront.init("8b68zzdb");
+  // Userfront.init("8b68zzdb");
 
-  const LoginForm = Userfront.build({
-    toolId: "lrkrro"
-  });
+  // const LoginForm = Userfront.build({
+  //   toolId: "lrkrro"
+  // });
 
   return (
     <>
