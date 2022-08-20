@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-export default function Footer(props) {
+export default function Footer() {
   return (
     <>
       <footer className="absolute w-full bottom-0 bg-blueGray-800 pb-6">
