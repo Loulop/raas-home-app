@@ -4,7 +4,6 @@ import Link from "next/link";
 
 export default function Navbar() {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
-  const lazyRoot = React.useRef(null);
 
   return (
     <nav className="top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg bg-white shadow">
