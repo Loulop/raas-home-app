@@ -1,5 +1,5 @@
 import React from "react";
-import type NextPage from "next";
+import type { NextPage } from "next";
 import Navbar from "../components/auth/navbar";
 import Footer from "../components/auth/footer";
 // import Userfront from "@userfront/react";
