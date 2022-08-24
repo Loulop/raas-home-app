@@ -2,13 +2,14 @@ import React from "react";
 import type { NextPage } from "next";
 import Navbar from "../components/auth/navbar";
 import Footer from "../components/auth/footer";
+// @ts-ignore
 import Userfront from "@userfront/react";
 
 const PasswordResetForm = Userfront.build({
   toolId: "lrkrro"
 });
 
-const Reset: NextPage = () => {
+const ResetPassword: NextPage = () => {
   return (
     <>
       <Navbar />
@@ -24,4 +25,4 @@ const Reset: NextPage = () => {
   );
 };
 
-export default Reset;
+export default ResetPassword;

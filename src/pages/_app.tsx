@@ -3,6 +3,10 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 // import Script from "next/script";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+// @ts-ignore
+import Userfront from "@userfront/react";
+
+Userfront.init("8b68zzdb");
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

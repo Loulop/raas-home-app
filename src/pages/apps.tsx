@@ -4,7 +4,7 @@ import RequireAuth from "../components/auth/requireAuth";
 
 const Apps: NextPage = () => {
   return (
-    <RequireAuth>
+    <RequireAuth mode="authenticated">
       <div>Test</div>
     </RequireAuth>
   );
