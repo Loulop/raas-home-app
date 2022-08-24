@@ -12,7 +12,7 @@ const RECOMMENDATIONS = [
 ];
 
 export default function useReco() {
-  const [data, setData] = React.useState(RECOMMENDATIONS[0]);
+  const [data, setData] = React.useState<string>(RECOMMENDATIONS[0]);
 
   React.useEffect(() => {
     const timeout = setTimeout(() => {
