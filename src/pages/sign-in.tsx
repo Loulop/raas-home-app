@@ -2,13 +2,14 @@ import React, { SyntheticEvent } from "react";
 import type { NextPage } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import Router from "next/router";
 // @ts-ignore
 import Userfront from "@userfront/react";
 //
 import Navbar from "../components/auth/navbar";
 import Footer from "../components/auth/footer";
 import Input from "../components/auth/input";
-import RequireAuth from "../components/auth/requireAuth";
+import PreProcessor from "../components/shared/preProcessor";
 
 interface AuthState {
   method: string;
@@ -47,8 +48,14 @@ const SignIn: NextPage = () => {
     [authState]
   );
 
+  const handlePreLoading = React.useCallback(async () => {
+    if (Userfront.tokens.accessToken) {
+      await Router.push("/apps");
+    }
+  }, []);
+
   return (
-    <RequireAuth mode="anonymous">
+    <PreProcessor callback={handlePreLoading}>
       <>
         <Navbar />
         <section className="relative w-full h-full py-40 min-h-screen">
@@ -137,7 +144,7 @@ const SignIn: NextPage = () => {
           {/**/}
         </section>
       </>
-    </RequireAuth>
+    </PreProcessor>
   );
 };
 
