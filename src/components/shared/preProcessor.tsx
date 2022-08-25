@@ -2,19 +2,21 @@ import React, { ReactElement } from "react";
 
 interface PreProcessorParams {
   children: ReactElement<any, any>;
-  callback: () => Promise<void>;
+  callback: () => Promise<boolean>;
 }
 
-export default function PreProcessor(props: PreProcessorParams) {
+export default function PreProcessor({
+  children,
+  callback
+}: PreProcessorParams) {
   const [isReady, setIsReady] = React.useState(false);
 
   React.useEffect(() => {
     (async () => {
-      await props.callback();
-      await setIsReady(true);
+      if (await callback()) await setIsReady(true);
     })();
-  }, [setIsReady]);
+  }, [setIsReady, callback]);
 
-  if (isReady) return props.children;
+  if (isReady) return children;
   return <div />;
 }

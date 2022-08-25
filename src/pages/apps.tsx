@@ -11,6 +11,7 @@ const Apps: NextPage = () => {
     if (!Userfront.tokens.accessToken) {
       await Router.push("/sign-in");
     }
+    return true;
   }, []);
 
   return (

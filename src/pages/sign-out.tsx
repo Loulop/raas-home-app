@@ -10,6 +10,7 @@ const SignOut: NextPage = () => {
   const handlePreLoading = React.useCallback(async () => {
     await Userfront.logout();
     await Router.replace("/");
+    return true;
   }, []);
 
   return (
