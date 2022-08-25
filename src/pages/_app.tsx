@@ -5,8 +5,9 @@ import Head from "next/head";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 // @ts-ignore
 import Userfront from "@userfront/react";
+import { USERFRONT_AUTH_TENANT_ID } from "../components/shared/globals";
 
-Userfront.init("8b68zzdb");
+Userfront.init(USERFRONT_AUTH_TENANT_ID);
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
