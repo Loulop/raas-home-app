@@ -14,9 +14,10 @@ interface AuthState {
   email: string;
 }
 
-const ResetPassword: NextPage = () => {
+const ChangePassword: NextPage = () => {
   const [authState, setAuthState] = React.useState<AuthState>({
-    email: ""
+    password: "",
+    verify_password: ""
   });
 
   const handlePreLoading = React.useCallback(async () => {
@@ -28,7 +29,9 @@ const ResetPassword: NextPage = () => {
   const handleFormSubmit = React.useCallback(
     (event: SyntheticEvent) => {
       event.preventDefault();
-      Userfront.sendResetLink(authState.email);
+      Userfront.resetPassword({
+        password: authState.password
+      });
     },
     [authState]
   );
@@ -56,7 +59,7 @@ const ResetPassword: NextPage = () => {
                   <div className="rounded-t mb-0 px-6 py-6">
                     <div className="text-center mb-3">
                       <h6 className="text-blueGray-500 text-sm font-bold">
-                        Reset Password
+                        Change Password
                       </h6>
                     </div>
                     <hr className="mt-6 border-b-1 border-blueGray-300" />
@@ -64,17 +67,25 @@ const ResetPassword: NextPage = () => {
                   <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
                     <form onSubmit={handleFormSubmit}>
                       <Input
-                        type="email"
-                        label="Email"
-                        name="email"
+                        type="password"
+                        label="Password"
+                        name="password"
                         onChange={handleInputChange}
-                        value={authState.email}
+                        value={authState.password}
                       />
                       <Input
+                        type="password"
+                        label="Confirm Password"
+                        name="verify_password"
+                        onChange={handleInputChange}
+                        value={authState.verify_password}
+                      />
+
+                      <Input
                         type="button"
-                        label="Send Reset Link"
+                        label="Change Password"
                         name="submit"
-                        value="Send Reset Link"
+                        value="Change Password"
                       />
                     </form>
                   </div>
@@ -91,4 +102,4 @@ const ResetPassword: NextPage = () => {
   );
 };
 
-export default ResetPassword;
+export default ChangePassword;

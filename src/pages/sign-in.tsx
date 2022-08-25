@@ -19,7 +19,7 @@ interface AuthState {
 
 const SignIn: NextPage = () => {
   const [authState, setAuthState] = React.useState<AuthState>({
-    method: "",
+    method: "password",
     email: "",
     password: ""
   });
@@ -28,10 +28,7 @@ const SignIn: NextPage = () => {
     async (event: SyntheticEvent) => {
       event.preventDefault();
       const target = event.target as HTMLInputElement;
-      const name = target.name;
-      const value =
-        target.name == "remember_me" ? target.checked : target.value;
-      await setAuthState({ ...authState, [name]: value });
+      await setAuthState({ ...authState, [target.name]: target.value });
     },
     [authState]
   );
@@ -40,7 +37,7 @@ const SignIn: NextPage = () => {
     (event: SyntheticEvent) => {
       event.preventDefault();
       Userfront.login({
-        method: "password",
+        method: authState.method,
         email: authState.email,
         password: authState.password
       });
