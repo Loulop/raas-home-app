@@ -9,7 +9,8 @@ import PreProcessor from "../components/shared/preProcessor";
 const Apps: NextPage = () => {
   const handlePreLoading = React.useCallback(async () => {
     if (!Userfront.tokens.accessToken) {
-      await Router.push("/sign-in");
+      await Router.replace("/sign-in");
+      // TODO: add next=url querystring.
     }
     return true;
   }, []);

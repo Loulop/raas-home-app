@@ -30,7 +30,7 @@ const SignUp: NextPage = () => {
 
   const handlePreLoading = React.useCallback(async () => {
     if (Userfront.tokens.accessToken) {
-      await Router.push("/apps");
+      await Router.replace("/apps");
     }
     return true;
   }, []);
