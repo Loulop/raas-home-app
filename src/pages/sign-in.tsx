@@ -52,13 +52,15 @@ const SignIn: NextPage = () => {
     const { next, uuid, token } = router.query;
 
     if (uuid && token) {
-      await Userfront.logout({ redirect: false });
-      await Userfront.login({
-        method: "link",
-        uuid: uuid,
-        token: token,
-        redirect: false
-      });
+      try {
+        // await Userfront.logout({ redirect: false });
+        await Userfront.login({
+          method: "link",
+          uuid: uuid,
+          token: token,
+          redirect: false
+        });
+      } catch (e) {}
     }
 
     if (!Userfront.tokens.accessToken) return true;

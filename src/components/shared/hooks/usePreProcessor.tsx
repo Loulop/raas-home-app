@@ -12,7 +12,6 @@ export default function usePreProcessor({
   const [isReady, setIsReady] = React.useState(false);
 
   const execute = React.useCallback(async () => {
-    console.log(callback);
     const result = await callback();
     await setIsReady(!!result);
   }, [callback]);
