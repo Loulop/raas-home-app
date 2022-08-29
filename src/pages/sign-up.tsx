@@ -35,9 +35,8 @@ const SignUp: NextPage = () => {
         method: authState.method,
         email: authState.email,
         password: authState.password,
-        data: {
-          full_name: authState.full_name
-        }
+        passwordVerify: authState.verify_password,
+        name: authState.full_name
       });
     },
     [authState]

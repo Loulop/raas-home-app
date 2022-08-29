@@ -47,11 +47,22 @@ const SignIn: NextPage = () => {
   );
 
   const handlePreLoading = React.useCallback(async () => {
-    if (!Userfront.tokens.accessToken) return true;
-
     if (!router.isReady) return false;
 
-    const { next } = router.query;
+    const { next, uuid, token } = router.query;
+
+    if (uuid && token) {
+      await Userfront.logout({ redirect: false });
+      await Userfront.login({
+        method: "link",
+        uuid: uuid,
+        token: token,
+        redirect: false
+      });
+    }
+
+    if (!Userfront.tokens.accessToken) return true;
+
     if (next) await Router.replace(encodeURI(next as string));
     await Router.replace("/apps");
     return false;

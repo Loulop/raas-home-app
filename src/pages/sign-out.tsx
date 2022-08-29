@@ -8,7 +8,7 @@ import usePreProcessor from "../components/shared/hooks/usePreProcessor";
 
 const SignOut: NextPage = () => {
   const handlePreLoading = React.useCallback(async () => {
-    await Userfront.logout();
+    await Userfront.logout({ redirect: false });
     await Router.replace("/");
     return true;
   }, []);

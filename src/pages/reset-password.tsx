@@ -20,9 +20,11 @@ const ResetPassword: NextPage = () => {
     email: ""
   });
   const handleFormSubmit = React.useCallback(
-    (event: SyntheticEvent) => {
+    async (event: SyntheticEvent) => {
       event.preventDefault();
       Userfront.sendResetLink(authState.email);
+      // TODO improve redirection with messages..
+      await Router.replace("/");
     },
     [authState]
   );
@@ -39,7 +41,7 @@ const ResetPassword: NextPage = () => {
   const handlePreLoading = React.useCallback(async () => {
     if (!Userfront.tokens.accessToken) return true;
 
-    await Router.push("/apps");
+    await Router.replace("/apps");
     return false;
   }, []);
 
