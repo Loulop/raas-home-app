@@ -149,7 +149,7 @@ const SignUp: NextPage = () => {
                   <div className="w-1/2 text-right">
                     <Link href="/sign-in">
                       <a className="text-slate-200">
-                        <small>has an account already?</small>
+                        <small>Sign in</small>
                       </a>
                     </Link>
                   </div>

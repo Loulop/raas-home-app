@@ -2,6 +2,7 @@ import React, { SyntheticEvent } from "react";
 import type { NextPage } from "next";
 import Router from "next/router";
 import Image from "next/image";
+import Link from "next/link";
 // @ts-ignore
 import Userfront from "@userfront/react";
 //
@@ -78,6 +79,22 @@ const ResetPassword: NextPage = () => {
                         value="Send Reset Link"
                       />
                     </form>
+                  </div>
+                </div>
+                <div className="flex flex-wrap mt-6 relative">
+                  <div className="w-1/2">
+                    <Link href="/sign-in">
+                      <a className="text-slate-200">
+                        <small>Sign in</small>
+                      </a>
+                    </Link>
+                  </div>
+                  <div className="w-1/2 text-right">
+                    <Link href="/sign-up">
+                      <a className="text-slate-200">
+                        <small>Sign up</small>
+                      </a>
+                    </Link>
                   </div>
                 </div>
               </div>
