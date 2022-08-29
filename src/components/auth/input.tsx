@@ -1,6 +1,6 @@
 import React, { SyntheticEvent } from "react";
 
-interface InputParams {
+interface IInputParams {
   type: string;
   label: string;
   name: string;
@@ -8,7 +8,7 @@ interface InputParams {
   onChange?: (event: SyntheticEvent) => Promise<void>;
 }
 
-export default function Input(props: InputParams) {
+export default function Input(props: IInputParams) {
   switch (props.type) {
     case "checkbox":
       return (

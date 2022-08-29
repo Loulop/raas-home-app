@@ -4,7 +4,7 @@ import Router from "next/router";
 // @ts-ignore
 import Userfront from "@userfront/react";
 //
-import PreProcessor from "../components/shared/preProcessor";
+import usePreProcessor from "../components/shared/hooks/usePreProcessor";
 
 const SignOut: NextPage = () => {
   const handlePreLoading = React.useCallback(async () => {
@@ -13,13 +13,9 @@ const SignOut: NextPage = () => {
     return true;
   }, []);
 
-  return (
-    <>
-      <PreProcessor callback={handlePreLoading}>
-        <div />
-      </PreProcessor>
-    </>
-  );
+  usePreProcessor({ callback: handlePreLoading, autoRefresh: true });
+
+  return <div className="relative w-full h-full min-h-screen bg-slate-800" />;
 };
 
 export default SignOut;
