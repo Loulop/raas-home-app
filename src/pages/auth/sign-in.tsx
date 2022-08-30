@@ -6,10 +6,10 @@ import Router, { useRouter } from "next/router";
 // @ts-ignore
 import Userfront from "@userfront/react";
 //
-import Navbar from "../components/auth/navbar";
-import Footer from "../components/auth/footer";
-import Input from "../components/auth/input";
-import usePreProcessor from "../components/shared/hooks/usePreProcessor";
+import Navbar from "../../components/auth/navbar";
+import Footer from "../../components/auth/footer";
+import Input from "../../components/auth/input";
+import usePreProcessor from "../../components/shared/hooks/usePreProcessor";
 
 interface AuthState {
   method: string;
@@ -145,16 +145,16 @@ const SignIn: NextPage = () => {
               </div>
               <div className="flex flex-wrap mt-6 relative">
                 <div className="w-1/2">
-                  <Link href="/reset-password">
+                  <Link href="/auth/reset-password">
                     <a className="text-slate-200">
                       <small>Forgot password?</small>
                     </a>
                   </Link>
                 </div>
                 <div className="w-1/2 text-right">
-                  <Link href="/sign-up">
+                  <Link href="/auth/sign-up">
                     <a className="text-slate-200">
-                      <small>Sign up</small>
+                      <small>Create new account</small>
                     </a>
                   </Link>
                 </div>

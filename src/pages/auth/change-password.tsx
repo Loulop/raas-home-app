@@ -5,10 +5,10 @@ import Image from "next/image";
 // @ts-ignore
 import Userfront from "@userfront/react";
 //
-import Input from "../components/auth/input";
-import usePreProcessor from "../components/shared/hooks/usePreProcessor";
-import Navbar from "../components/auth/navbar";
-import Footer from "../components/auth/footer";
+import Input from "../../components/auth/input";
+import usePreProcessor from "../../components/shared/hooks/usePreProcessor";
+import Navbar from "../../components/auth/navbar";
+import Footer from "../../components/auth/footer";
 
 interface AuthState {
   password: string;

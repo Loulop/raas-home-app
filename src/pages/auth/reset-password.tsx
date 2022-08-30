@@ -6,10 +6,10 @@ import Link from "next/link";
 // @ts-ignore
 import Userfront from "@userfront/react";
 //
-import Input from "../components/auth/input";
-import usePreProcessor from "../components/shared/hooks/usePreProcessor";
-import Navbar from "../components/auth/navbar";
-import Footer from "../components/auth/footer";
+import Input from "../../components/auth/input";
+import usePreProcessor from "../../components/shared/hooks/usePreProcessor";
+import Navbar from "../../components/auth/navbar";
+import Footer from "../../components/auth/footer";
 
 interface AuthState {
   email: string;
@@ -91,16 +91,19 @@ const ResetPassword: NextPage = () => {
               </div>
               <div className="flex flex-wrap mt-6 relative">
                 <div className="w-1/2">
-                  <Link href="/sign-in">
+                  <small className="text-slate-400">
+                    Already have an account?{" "}
+                  </small>
+                  <Link href="/auth/sign-in">
                     <a className="text-slate-200">
                       <small>Sign in</small>
                     </a>
                   </Link>
                 </div>
                 <div className="w-1/2 text-right">
-                  <Link href="/sign-up">
+                  <Link href="/auth/sign-up">
                     <a className="text-slate-200">
-                      <small>Sign up</small>
+                      <small>Create new account</small>
                     </a>
                   </Link>
                 </div>

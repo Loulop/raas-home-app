@@ -11,7 +11,7 @@ const AppsIndex: NextPage = () => {
   const handlePreLoading = React.useCallback(async () => {
     // 1. check userfront token
     if (!Userfront.tokens.accessToken) {
-      await Router.replace(`/sign-in?next=${Router.pathname}`);
+      await Router.replace(`/auth/sign-in?next=${Router.pathname}`);
     }
     // 2. check /me
     return true;

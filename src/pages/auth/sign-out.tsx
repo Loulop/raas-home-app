@@ -4,7 +4,7 @@ import Router from "next/router";
 // @ts-ignore
 import Userfront from "@userfront/react";
 //
-import usePreProcessor from "../components/shared/hooks/usePreProcessor";
+import usePreProcessor from "../../components/shared/hooks/usePreProcessor";
 
 const SignOut: NextPage = () => {
   const handlePreLoading = React.useCallback(async () => {
