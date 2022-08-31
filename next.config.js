@@ -6,7 +6,7 @@ const withPWA = require("next-pwa")({
   buildExcludes: [/middleware-manifest\.json$/]
 });
 
-const config = withPWA({
+module.exports = withPWA({
   // assetPrefix: "/raas-home-app/",
   // basePath: "/raas-home-app",
   reactStrictMode: true,
@@ -21,8 +21,3 @@ const config = withPWA({
     return config;
   }
 });
-
-// tmp nextjs bug fix: pwa is an invalid property to nextjs config.
-delete config.pwa;
-
-module.exports = config;
