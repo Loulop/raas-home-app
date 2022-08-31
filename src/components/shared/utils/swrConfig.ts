@@ -67,10 +67,7 @@ export const APIFetcher = async ({
   let data;
   try {
     data = await res.json();
-  } catch (err) {
-    result = { uri: uri, ok: false, status: 400, data: { message: err } };
-    throw new APIError(result);
-  }
+  } catch (err) {}
 
   result = {
     uri: uri,
