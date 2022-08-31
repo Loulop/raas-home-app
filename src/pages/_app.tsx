@@ -6,7 +6,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import Userfront from "@userfront/react";
 import { USERFRONT_AUTH_TENANT_ID } from "../components/shared/globals";
 import { SWRConfig } from "swr";
-import SWRDefaultConfig from "../components/shared/utils/SWRDefaultConfig";
+import SWRDefaultConfig from "../components/shared/utils/swrConfig";
 
 Userfront.init(USERFRONT_AUTH_TENANT_ID);
 
