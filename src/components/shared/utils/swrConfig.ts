@@ -33,7 +33,7 @@ class APIError extends Error {
   }
 }
 
-const APIFetcher = async ({
+export const APIFetcher = async ({
   uri,
   options,
   secure
