@@ -14,7 +14,6 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <html lang="en" />
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta

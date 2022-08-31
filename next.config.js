@@ -5,12 +5,8 @@ const runtimeCaching = require("next-pwa/cache");
 const config = withPWA({
   pwa: {
     dest: "public",
-    runtimeCaching
-  },
-  experimental: {
-    images: {
-      unoptimized: true
-    }
+    runtimeCaching,
+    buildExcludes: [/middleware-manifest.json$/]
   },
   // assetPrefix: "/raas-home-app/",
   // basePath: "/raas-home-app",
