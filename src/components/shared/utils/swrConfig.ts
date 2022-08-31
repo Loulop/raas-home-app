@@ -16,6 +16,7 @@ interface IAPIFetchResult {
 
 interface IAPIErrorParams {
   uri: string;
+  ok?: boolean;
   status: number;
   data?: { [id: string]: any };
 }
@@ -42,49 +43,44 @@ export const APIFetcher = async ({
   let headers = Object.assign(options.headers || {}, {});
   let result;
 
-  try {
-    if (secure !== false) {
-      let tokens = getTokens();
-      if (!tokens.accessToken || !tokens.refreshToken) {
-        result = {
-          uri: uri,
-          ok: false,
-          status: 400,
-          data: undefined
-        };
-        throw new APIError(result);
-      }
-      headers = Object.assign(headers, {
-        Authorization: `Bearer ${tokens.accessToken}`
-      });
-    }
-
-    const res = await fetch(
-      `${MANAGEMENT_API_ENDPOINT}${uri}`,
-      Object.assign(options, headers)
-    );
-
-    let data;
-    try {
-      data = await res.json();
-    } catch (err) {
-      result = { uri: uri, ok: false, status: 400, data: err };
+  if (secure !== false) {
+    let tokens = getTokens();
+    if (!tokens.accessToken || !tokens.refreshToken) {
+      result = {
+        uri: uri,
+        ok: false,
+        status: 400,
+        data: undefined
+      };
       throw new APIError(result);
     }
-
-    result = {
-      uri: uri,
-      ok: res.ok,
-      status: res.status,
-      data: data
-    };
-
-    if (!result.ok) throw new APIError(result);
-  } catch (err) {
-    console.error(new APIError(result));
-  } finally {
-    return result;
+    headers = Object.assign(headers, {
+      Authorization: `Bearer ${tokens.accessToken}`
+    });
   }
+
+  const res = await fetch(
+    `${MANAGEMENT_API_ENDPOINT}${uri}`,
+    Object.assign(options, headers)
+  );
+
+  let data;
+  try {
+    data = await res.json();
+  } catch (err) {
+    result = { uri: uri, ok: false, status: 400, data: { message: err } };
+    throw new APIError(result);
+  }
+
+  result = {
+    uri: uri,
+    ok: res.ok,
+    status: res.status,
+    data: data
+  };
+
+  if (!result.ok) throw new APIError(result);
+  return result;
 };
 
 export default {
