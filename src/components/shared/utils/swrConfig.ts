@@ -40,7 +40,10 @@ export const APIFetcher = async ({
   secure
 }: IAPIFetchParams): Promise<IAPIFetchResult> => {
   options = options || {};
-  let headers = Object.assign(options.headers || {}, {});
+  let headers = Object.assign(
+    { "Content-Type": "application/json" },
+    options.headers
+  );
   let result;
 
   if (secure !== false) {
