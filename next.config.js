@@ -2,10 +2,15 @@
 const withPWA = require("next-pwa");
 const runtimeCaching = require("next-pwa/cache");
 
-module.exports = withPWA({
+const config = withPWA({
   pwa: {
     dest: "public",
     runtimeCaching
+  },
+  experimental: {
+    images: {
+      unoptimized: true
+    }
   },
   // assetPrefix: "/raas-home-app/",
   // basePath: "/raas-home-app",
@@ -21,3 +26,8 @@ module.exports = withPWA({
     return config;
   }
 });
+
+// tmp nextjs bug fix: pwa is an invalid property to nextjs config.
+delete config.pwa;
+
+module.exports = config;
