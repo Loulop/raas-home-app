@@ -16,15 +16,15 @@ if (!self.define) {
       })
   );
   self.define = (i, n) => {
-    const t =
+    const c =
       e ||
       ("document" in self ? document.currentScript.src : "") ||
       location.href;
-    if (s[t]) return;
-    let c = {};
-    const o = (e) => a(e, t),
-      r = { module: { uri: t }, exports: c, require: o };
-    s[t] = Promise.all(i.map((e) => r[e] || o(e))).then((e) => (n(...e), c));
+    if (s[c]) return;
+    let t = {};
+    const o = (e) => a(e, c),
+      r = { module: { uri: c }, exports: t, require: o };
+    s[c] = Promise.all(i.map((e) => r[e] || o(e))).then((e) => (n(...e), t));
   };
 }
 define(["./workbox-6a1bf588"], function (e) {
@@ -35,88 +35,88 @@ define(["./workbox-6a1bf588"], function (e) {
     e.precacheAndRoute(
       [
         {
-          url: "/_next/static/X5w0bzjYjeVNXulXC6_lT/_buildManifest.js",
-          revision: "3702a9b1bf3b7c9aab72d906e9888b93"
+          url: "/_next/static/anFKbEliPGENn-jnDaQzY/_buildManifest.js",
+          revision: "7b11a58573e740d54c07c0a1c1098637"
         },
         {
-          url: "/_next/static/X5w0bzjYjeVNXulXC6_lT/_ssgManifest.js",
+          url: "/_next/static/anFKbEliPGENn-jnDaQzY/_ssgManifest.js",
           revision: "5352cb582146311d1540f6075d1f265e"
         },
         {
-          url: "/_next/static/chunks/169-8137258d4e038a8c.js",
-          revision: "8137258d4e038a8c"
+          url: "/_next/static/chunks/26-72c22af311ca6b85.js",
+          revision: "72c22af311ca6b85"
         },
         {
-          url: "/_next/static/chunks/433-341e833f4e25efa4.js",
-          revision: "341e833f4e25efa4"
+          url: "/_next/static/chunks/433-4c31ce78abef7148.js",
+          revision: "4c31ce78abef7148"
         },
         {
-          url: "/_next/static/chunks/framework-ae4f43955bfa5ddc.js",
-          revision: "ae4f43955bfa5ddc"
+          url: "/_next/static/chunks/framework-9b5d6ec4444c80fa.js",
+          revision: "9b5d6ec4444c80fa"
         },
         {
-          url: "/_next/static/chunks/main-bc55ed9d76420683.js",
-          revision: "bc55ed9d76420683"
+          url: "/_next/static/chunks/main-f328696cba0f1db2.js",
+          revision: "f328696cba0f1db2"
         },
         {
-          url: "/_next/static/chunks/pages/_app-1705906dbb29e39d.js",
-          revision: "1705906dbb29e39d"
+          url: "/_next/static/chunks/pages/_app-e44e7f93addd1e4c.js",
+          revision: "e44e7f93addd1e4c"
         },
         {
           url: "/_next/static/chunks/pages/_error-7397496ca01950b1.js",
           revision: "7397496ca01950b1"
         },
         {
-          url: "/_next/static/chunks/pages/about-us-5f08c0d4fdfb91ec.js",
-          revision: "5f08c0d4fdfb91ec"
+          url: "/_next/static/chunks/pages/about-us-4ecf382f456a984b.js",
+          revision: "4ecf382f456a984b"
         },
         {
-          url: "/_next/static/chunks/pages/apps-b3ec2b0129573e0a.js",
-          revision: "b3ec2b0129573e0a"
+          url: "/_next/static/chunks/pages/apps-3f95c7a70f1863ae.js",
+          revision: "3f95c7a70f1863ae"
         },
         {
-          url: "/_next/static/chunks/pages/auth-23923f893da4b85f.js",
-          revision: "23923f893da4b85f"
+          url: "/_next/static/chunks/pages/auth-69f6700c40c0946f.js",
+          revision: "69f6700c40c0946f"
         },
         {
-          url: "/_next/static/chunks/pages/auth/change-password-48cfdaead2088417.js",
-          revision: "48cfdaead2088417"
+          url: "/_next/static/chunks/pages/auth/change-password-12535909c15d5490.js",
+          revision: "12535909c15d5490"
         },
         {
-          url: "/_next/static/chunks/pages/auth/reset-password-f0769d39ad78381f.js",
-          revision: "f0769d39ad78381f"
+          url: "/_next/static/chunks/pages/auth/reset-password-133509b931be38e4.js",
+          revision: "133509b931be38e4"
         },
         {
-          url: "/_next/static/chunks/pages/auth/sign-in-6472066903d48be5.js",
-          revision: "6472066903d48be5"
+          url: "/_next/static/chunks/pages/auth/sign-in-7f4d189f572463d6.js",
+          revision: "7f4d189f572463d6"
         },
         {
-          url: "/_next/static/chunks/pages/auth/sign-out-24136abf974850b1.js",
-          revision: "24136abf974850b1"
+          url: "/_next/static/chunks/pages/auth/sign-out-4eaf993db58528ff.js",
+          revision: "4eaf993db58528ff"
         },
         {
-          url: "/_next/static/chunks/pages/auth/sign-up-f7f2f55222dcff0d.js",
-          revision: "f7f2f55222dcff0d"
+          url: "/_next/static/chunks/pages/auth/sign-up-a5cc8d13726f2244.js",
+          revision: "a5cc8d13726f2244"
         },
         {
-          url: "/_next/static/chunks/pages/index-e3a0d1d55d4dcdc3.js",
-          revision: "e3a0d1d55d4dcdc3"
+          url: "/_next/static/chunks/pages/index-c2c2a27a0bbd9472.js",
+          revision: "c2c2a27a0bbd9472"
         },
         {
-          url: "/_next/static/chunks/pages/privacy-policy-ac8f7a18cf4d3fdf.js",
-          revision: "ac8f7a18cf4d3fdf"
+          url: "/_next/static/chunks/pages/privacy-policy-b444cd8a90e9a189.js",
+          revision: "b444cd8a90e9a189"
         },
         {
-          url: "/_next/static/chunks/pages/tos-and-conditions-35f4c98714c09002.js",
-          revision: "35f4c98714c09002"
+          url: "/_next/static/chunks/pages/tos-and-conditions-51b60adc81510d0b.js",
+          revision: "51b60adc81510d0b"
         },
         {
-          url: "/_next/static/chunks/polyfills-0d1b80a048d4787e.js",
-          revision: "40ccea369337cec877151c906f22814d"
+          url: "/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js",
+          revision: "837c0df77fd5009c9e46d446188ecfd0"
         },
         {
-          url: "/_next/static/chunks/webpack-71e149bd9a6f2c0d.js",
-          revision: "71e149bd9a6f2c0d"
+          url: "/_next/static/chunks/webpack-3433a2a2d0cf6fb6.js",
+          revision: "3433a2a2d0cf6fb6"
         },
         {
           url: "/_next/static/css/3941d208f35814d0.css",
@@ -238,7 +238,7 @@ define(["./workbox-6a1bf588"], function (e) {
           url: "/images/nlogo512.png",
           revision: "a8243257cac6ddae69da78d51f05a0d5"
         },
-        { url: "/manifest.json", revision: "9e9a727dacc8af5ebaf4101ea1915d13" },
+        { url: "/manifest.json", revision: "c90d8a7803570270b21de61dbf6e6d60" },
         { url: "/robots.txt", revision: "fa1ded1ed7c11438a9b0385b1e112850" }
       ],
       { ignoreURLParametersMatching: [] }
