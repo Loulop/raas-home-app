@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Navbar() {
@@ -15,7 +14,7 @@ export default function Navbar() {
               className="text-slate-700 text-sm font-bold leading-relaxed inline-block mr-4 whitespace-nowrap uppercase flex"
             >
               <div className="inline mx-2 flex">
-                <Image
+                <img
                   className=""
                   src={"/images/logo192.png"}
                   alt="logo"

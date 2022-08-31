@@ -1,6 +1,5 @@
 import React, { SyntheticEvent } from "react";
 import type { NextPage } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import Router, { useRouter } from "next/router";
 // @ts-ignore
@@ -101,7 +100,7 @@ const SignIn: NextPage = () => {
                       type="button"
                     >
                       <div className="w-5 mr-1">
-                        <Image
+                        <img
                           src={"/images/google.svg"}
                           alt="..."
                           width={20}

@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import Navbar from "../components/home/navbar";
 import Footer from "../components/home/footer";
-import Image from "next/image";
 
 const PrivacyPolicy: NextPage = () => {
   return (

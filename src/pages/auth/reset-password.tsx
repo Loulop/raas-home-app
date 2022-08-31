@@ -1,7 +1,6 @@
 import React, { SyntheticEvent } from "react";
 import type { NextPage } from "next";
 import Router from "next/router";
-import Image from "next/image";
 import Link from "next/link";
 // @ts-ignore
 import Userfront from "@userfront/react";

@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Navbar() {
@@ -9,14 +8,14 @@ export default function Navbar() {
     <>
       <nav className="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
-          <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+          <div className="w-full relative flex items-center justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <Link href="/">
               <a
                 className="flex text-white text-sm font-bold leading-relaxed inline-block mr-4 whitespace-nowrap uppercase"
                 href="#"
               >
                 <div className="inline mx-2 flex">
-                  <Image
+                  <img
                     className=""
                     src={"/images/logo192.png"}
                     alt="logo"
