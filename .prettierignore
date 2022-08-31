@@ -5,3 +5,4 @@ out
 coverage
 .sewing-kit
 *.svg
+.next

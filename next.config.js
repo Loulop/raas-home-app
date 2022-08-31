@@ -5,6 +5,16 @@ const withPWA = require("next-pwa")({
   runtimeCaching,
   buildExcludes: [/middleware-manifest\.json$/]
 });
+const fs = require("fs");
+const toml = require("toml");
+
+let text = "";
+if (process.env.NODE_ENV === "production") {
+  text = fs.readFileSync("./config/production.toml", "utf8");
+} else {
+  text = fs.readFileSync("./config/development.toml", "utf8");
+}
+const appConfig = toml.parse(text);
 
 module.exports = withPWA({
   // assetPrefix: "/raas-home-app/",
@@ -19,5 +29,8 @@ module.exports = withPWA({
     });
 
     return config;
+  },
+  env: {
+    MANAGEMENT_API_ENDPOINT: appConfig.MANAGEMENT_API_ENDPOINT
   }
 });
