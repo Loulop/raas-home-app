@@ -39,44 +39,52 @@ export const APIFetcher = async ({
   secure
 }: IAPIFetchParams): Promise<IAPIFetchResult> => {
   options = options || {};
-  if (secure !== false) secure = true;
-  let headers = options.headers || {};
-  if (secure) {
-    let tokens = getTokens();
-    if (!tokens.accessToken || !tokens.refreshToken)
-      return {
-        uri: uri,
-        ok: false,
-        status: 400,
-        data: undefined
-      };
-    headers = Object.assign(headers, {
-      Authorization: `Bearer ${tokens.accessToken}`
-    });
-  }
+  let headers = Object.assign(options.headers || {}, {});
+  let result;
 
-  const res = await fetch(
-    `${MANAGEMENT_API_ENDPOINT}${uri}`,
-    Object.assign(options, headers)
-  );
-
-  let data;
   try {
-    data = await res.json();
+    if (secure !== false) {
+      let tokens = getTokens();
+      if (!tokens.accessToken || !tokens.refreshToken) {
+        result = {
+          uri: uri,
+          ok: false,
+          status: 400,
+          data: undefined
+        };
+        throw new APIError(result);
+      }
+      headers = Object.assign(headers, {
+        Authorization: `Bearer ${tokens.accessToken}`
+      });
+    }
+
+    const res = await fetch(
+      `${MANAGEMENT_API_ENDPOINT}${uri}`,
+      Object.assign(options, headers)
+    );
+
+    let data;
+    try {
+      data = await res.json();
+    } catch (err) {
+      result = { uri: uri, ok: false, status: 400, data: err };
+      throw new APIError(result);
+    }
+
+    result = {
+      uri: uri,
+      ok: res.ok,
+      status: res.status,
+      data: data
+    };
+
+    if (!result.ok) throw new APIError(result);
   } catch (err) {
-    data = null;
+    console.error(new APIError(result));
+  } finally {
+    return result;
   }
-
-  const result: IAPIFetchResult = {
-    uri: uri,
-    ok: res.ok,
-    status: res.status,
-    data: data
-  };
-
-  if (!res.ok) console.error(new APIError(result));
-
-  return result;
 };
 
 export default {
