@@ -31,6 +31,10 @@ module.exports = withPWA({
     return config;
   },
   env: {
-    MANAGEMENT_API_ENDPOINT: appConfig.MANAGEMENT_API_ENDPOINT
+    MANAGEMENT_API_ENDPOINT: appConfig.MANAGEMENT_API_ENDPOINT,
+    //
+    AUTH0_DOMAIN: appConfig.AUTH0_DOMAIN,
+    AUTH0_CLIENT_ID: appConfig.AUTH0_CLIENT_ID,
+    AUTH0_REDIRECT_URI: appConfig.AUTH0_REDIRECT_URI
   }
 });

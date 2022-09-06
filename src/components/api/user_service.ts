@@ -1,12 +1,12 @@
-import { MANAGEMENT_API_ENDPOINT } from "../shared/globals";
+const getMe = {
+  uri: "/me",
+  secure: true,
+  options: {
+    method: "GET",
+    headers: {}
+  }
+};
 
-interface IGetMeParams {
-  bearer: string;
-}
-
-interface IGetMeResult {}
-
-const getMe = async ({ bearer }: IGetMeParams): Promise<IGetMeResult> => {
-  // TODO:
-  return {};
+export default {
+  getMe
 };

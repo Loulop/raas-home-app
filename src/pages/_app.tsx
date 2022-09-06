@@ -2,13 +2,10 @@ import "../assets/css/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-// @ts-ignore
-import Userfront from "@userfront/react";
-import { USERFRONT_AUTH_TENANT_ID } from "../components/shared/globals";
+import { Auth0Provider } from "@auth0/auth0-react";
 import { SWRConfig } from "swr";
+import Auth0Config from "../components/shared/utils/auth0Config";
 import SWRDefaultConfig from "../components/shared/utils/swrConfig";
-
-Userfront.init(USERFRONT_AUTH_TENANT_ID);
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -48,9 +45,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="apple-touch-icon" href="/images/wlogo512.png" />
         <meta name="theme-color" content="#da2b42" />
       </Head>
-      <SWRConfig value={SWRDefaultConfig}>
-        <Component {...pageProps} />
-      </SWRConfig>
+      <Auth0Provider {...Auth0Config}>
+        <SWRConfig value={SWRDefaultConfig}>
+          <Component {...pageProps} />
+        </SWRConfig>
+      </Auth0Provider>
     </>
   );
 }
