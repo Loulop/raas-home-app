@@ -1,13 +1,20 @@
-import "../assets/css/globals.css";
+import type { NextPage } from "next";
 import type { AppProps } from "next/app";
+import { ReactElement, ReactNode } from "react";
 import Head from "next/head";
+import "../assets/css/globals.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import { Auth0Provider } from "@auth0/auth0-react";
-import { SWRConfig } from "swr";
-import Auth0Config from "../components/shared/utils/auth0Config";
-import SWRDefaultConfig from "../components/shared/utils/swrConfig";
 
-function MyApp({ Component, pageProps }: AppProps) {
+export type NextPageWithLayout = NextPage & {
+  getLayout?: (page: ReactElement) => ReactNode;
+};
+
+export type AppPropsWithLayout = AppProps & {
+  Component: NextPageWithLayout;
+};
+
+function MyApp({ Component, pageProps }: AppPropsWithLayout) {
+  const getLayout = Component.getLayout ?? ((page) => page);
   return (
     <>
       <Head>
@@ -45,11 +52,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="apple-touch-icon" href="/images/wlogo512.png" />
         <meta name="theme-color" content="#da2b42" />
       </Head>
-      <Auth0Provider {...Auth0Config}>
-        <SWRConfig value={SWRDefaultConfig}>
-          <Component {...pageProps} />
-        </SWRConfig>
-      </Auth0Provider>
+      {getLayout(<Component {...pageProps} />)}
     </>
   );
 }

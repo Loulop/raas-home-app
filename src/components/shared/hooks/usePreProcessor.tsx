@@ -5,10 +5,15 @@ interface IPreProcessParams {
   autoRefresh?: boolean;
 }
 
+interface IPreProcessResult {
+  execute: () => Promise<void>;
+  isReady: boolean;
+}
+
 export default function usePreProcessor({
   callback,
   autoRefresh
-}: IPreProcessParams) {
+}: IPreProcessParams): IPreProcessResult {
   const [isReady, setIsReady] = React.useState(false);
 
   const execute = React.useCallback(async () => {
